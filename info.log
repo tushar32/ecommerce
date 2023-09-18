@@ -1,0 +1,66 @@
+{"level":"error","message":"Util Service TE :product.findf is not a function","timestamp":"2023-08-26T10:37:45.998Z"}
+{"level":"error","message":"Utill Service ReE :[object Object]","timestamp":"2023-08-26T10:37:46.132Z"}
+{"level":"error","message":"Util Service TE :product.findf is not a function","timestamp":"2023-08-26T10:38:34.347Z"}
+{"level":"error","message":"Utill Service ReE :[object Object]","timestamp":"2023-08-26T10:38:34.351Z"}
+{"level":"error","message":"Util Service TE :product.findf is not a function","timestamp":"2023-08-26T10:39:54.144Z"}
+{"level":"error","message":"Util Service TE :product.findf is not a function","timestamp":"2023-08-26T10:40:48.908Z"}
+{"level":"error","message":"Utill Service ReE :[object Object]","timestamp":"2023-08-26T10:40:48.912Z"}
+{"level":"error","message":"Util Service TE :product.findf is not a function","timestamp":"2023-08-26T10:41:32.849Z"}
+{"level":"error","message":"Util Service TE :product.findf is not a function","timestamp":"2023-08-26T10:41:43.902Z"}
+{"level":"error","message":"Utill Service ReE :[object Object]","timestamp":"2023-08-26T10:41:43.911Z"}
+{"level":"error","message":"Util Service TE :product.findf is not a function","timestamp":"2023-08-26T11:14:21.798Z"}
+{"level":"error","message":"Utill Service ReE :[object Object]","timestamp":"2023-08-26T11:14:21.801Z"}
+{"level":"error","message":"Util Service TE :product.save is not a function","timestamp":"2023-08-29T09:08:09.261Z"}
+{"level":"error","message":"Utill Service ReE :[object Object]","timestamp":"2023-08-29T09:08:09.383Z"}
+{"level":"error","message":"Util Service TE :Cannot access 'product' before initialization","timestamp":"2023-08-29T09:09:23.689Z"}
+{"level":"error","message":"Utill Service ReE :[object Object]","timestamp":"2023-08-29T09:09:23.728Z"}
+{"level":"error","message":"Util Service TE :product.save is not a function","timestamp":"2023-08-29T09:23:31.091Z"}
+{"level":"error","message":"Util Service TE :product.save is not a function","timestamp":"2023-08-29T09:25:55.156Z"}
+{"level":"error","message":"Util Service TE :product.save is not a function","timestamp":"2023-08-29T09:26:33.664Z"}
+{"level":"error","message":"Util Service TE :product.save is not a function","timestamp":"2023-08-29T09:26:41.098Z"}
+{"level":"error","message":"Util Service TE :product.save is not a function","timestamp":"2023-08-29T09:27:14.397Z"}
+{"level":"error","message":"Util Service TE :product.save is not a function","timestamp":"2023-08-29T09:27:32.901Z"}
+{"level":"error","message":"Util Service TE :product.save is not a function","timestamp":"2023-08-29T09:35:23.597Z"}
+{"level":"error","message":"Util Service TE :product.save is not a function","timestamp":"2023-08-29T09:35:43.449Z"}
+{"level":"error","message":"Util Service TE :product.save is not a function","timestamp":"2023-08-29T09:36:03.766Z"}
+{"level":"error","message":"Util Service TE :product.save is not a function","timestamp":"2023-08-29T09:38:29.206Z"}
+{"level":"error","message":"Util Service TE :Product.save is not a function","timestamp":"2023-08-29T09:47:21.330Z"}
+{"level":"error","message":"Util Service TE :Product.save is not a function","timestamp":"2023-08-29T09:47:42.241Z"}
+{"level":"error","message":"Util Service TE :Product.save is not a function","timestamp":"2023-08-29T09:51:40.848Z"}
+{"level":"error","message":"Util Service TE :Product.save is not a function","timestamp":"2023-08-29T09:51:59.983Z"}
+{"level":"error","message":"Util Service TE :products validation failed: description: Path `description` is required., title: Path `title` is required.","timestamp":"2023-08-29T10:01:02.080Z"}
+{"level":"error","message":"Util Service TE :products validation failed: description: Path `description` is required., title: Path `title` is required.","timestamp":"2023-08-29T10:02:32.277Z"}
+{"level":"error","message":"Util Service TE :products validation failed: description: Path `description` is required., title: Path `title` is required.","timestamp":"2023-08-29T10:03:20.381Z"}
+{"level":"error","message":"Util Service TE :products validation failed: description: Path `description` is required., title: Path `title` is required.","timestamp":"2023-08-29T10:03:40.454Z"}
+{"level":"error","message":"Util Service TE :products validation failed: title: Path `title` is required., description: Path `description` is required.","timestamp":"2023-09-04T10:11:28.736Z"}
+{"level":"error","message":"Utill Service ReE :[object Object]","timestamp":"2023-09-04T10:11:28.740Z"}
+{"level":"error","message":"Util Service TE :body is not defined","timestamp":"2023-09-16T09:41:57.479Z"}
+{"level":"error","message":"Utill Service ReE :[object Object]","timestamp":"2023-09-16T09:41:57.512Z"}
+{"level":"error","message":"Util Service TE :body is not defined","timestamp":"2023-09-16T09:41:57.845Z"}
+{"level":"error","message":"Utill Service ReE :[object Object]","timestamp":"2023-09-16T09:41:57.848Z"}
+{"level":"error","message":"Util Service TE :body is not defined","timestamp":"2023-09-16T09:41:58.596Z"}
+{"level":"error","message":"Utill Service ReE :[object Object]","timestamp":"2023-09-16T09:41:58.599Z"}
+{"level":"error","message":"Util Service TE :body is not defined","timestamp":"2023-09-16T09:41:58.767Z"}
+{"level":"error","message":"Utill Service ReE :[object Object]","timestamp":"2023-09-16T09:41:58.769Z"}
+{"level":"error","message":"Util Service TE :body is not defined","timestamp":"2023-09-16T09:41:58.966Z"}
+{"level":"error","message":"Utill Service ReE :[object Object]","timestamp":"2023-09-16T09:41:58.968Z"}
+{"level":"error","message":"Util Service TE :body is not defined","timestamp":"2023-09-16T09:41:59.105Z"}
+{"level":"error","message":"Utill Service ReE :[object Object]","timestamp":"2023-09-16T09:41:59.108Z"}
+{"level":"error","message":"Util Service TE :body is not defined","timestamp":"2023-09-16T09:42:03.256Z"}
+{"level":"error","message":"Utill Service ReE :[object Object]","timestamp":"2023-09-16T09:42:03.262Z"}
+{"level":"error","message":"Util Service TE :body is not defined","timestamp":"2023-09-16T09:44:39.713Z"}
+{"level":"error","message":"Utill Service ReE :[object Object]","timestamp":"2023-09-16T09:44:39.716Z"}
+{"level":"error","message":"Util Service TE :body is not defined","timestamp":"2023-09-16T09:44:40.176Z"}
+{"level":"error","message":"Utill Service ReE :[object Object]","timestamp":"2023-09-16T09:44:40.180Z"}
+{"level":"error","message":"Util Service TE :body is not defined","timestamp":"2023-09-16T09:44:40.360Z"}
+{"level":"error","message":"Utill Service ReE :[object Object]","timestamp":"2023-09-16T09:44:40.363Z"}
+{"level":"error","message":"Util Service TE :body is not defined","timestamp":"2023-09-16T09:44:40.553Z"}
+{"level":"error","message":"Utill Service ReE :[object Object]","timestamp":"2023-09-16T09:44:40.556Z"}
+{"level":"error","message":"Util Service TE :body is not defined","timestamp":"2023-09-16T09:44:40.732Z"}
+{"level":"error","message":"Utill Service ReE :[object Object]","timestamp":"2023-09-16T09:44:40.735Z"}
+{"level":"error","message":"Util Service TE :body is not defined","timestamp":"2023-09-16T09:44:47.155Z"}
+{"level":"error","message":"Utill Service ReE :[object Object]","timestamp":"2023-09-16T09:44:47.158Z"}
+{"level":"error","message":"Util Service TE :body is not defined","timestamp":"2023-09-16T09:44:47.334Z"}
+{"level":"error","message":"Utill Service ReE :[object Object]","timestamp":"2023-09-16T09:44:47.338Z"}
+{"level":"error","message":"Util Service TE :body is not defined","timestamp":"2023-09-16T09:45:19.132Z"}
+{"level":"error","message":"Utill Service ReE :[object Object]","timestamp":"2023-09-16T09:45:19.135Z"}
