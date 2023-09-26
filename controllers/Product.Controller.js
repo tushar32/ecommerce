@@ -32,14 +32,14 @@ const saveProduct = async (req,res) => {
     
     const formData = req.body;
     const {
-        params: { id },
-        body
+        params: { productId }
       } = req
    
-    if(id)
+      console.log('id', req)
+    if(productId)
         [err, product] = await to(productService.saveProduct(formData));
     else
-        [err, product] = await to(productService.editProduct(id, formData));
+        [err, product] = await to(productService.editProduct(productId, formData));
 
         
 

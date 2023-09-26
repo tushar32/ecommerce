@@ -6,17 +6,29 @@ import Button from 'react-bootstrap/Button';
 import { checkValidation } from '../../utils/checkValidation';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import useFetch from '../../hooks/useFetch';
-import { Tab, Tabs } from 'react-bootstrap';
+import { Spinner, Tab, Tabs } from 'react-bootstrap';
+import { useDispatch, useSelector } from "react-redux";
+import { loadProduct, saveProduct } from './productSlice';
 
 const EditProduct = () => {
     let { id } = useParams();
 
-    const { data } = useFetch({
-        url: `http://localhost:8000/api/v1/products/${id}`,
-        initialData: null,
-        depencenies: []
-    })
+    const dispatch = useDispatch();
+    const { product }  = useSelector((state) => state.products);
+
+    console.log('product', product)
+    useEffect(() => {
+       dispatch(loadProduct(id))
+        
+    },[dispatch])
+
+    useEffect(() => {
+      
+      if(product) {
+        setFormData({...formData, ...product })
+      }
+    },[product])
+
 
   const [formData, setFormData] = useState({
     title:'',
@@ -44,12 +56,6 @@ const EditProduct = () => {
   const { title, description, alias, keywords, itemcode, price, ean } = formData
 
   useEffect(() => {
-    if(data) {
-        setFormData({...formData, ...data })
-    }
-  },[data])
-
-  useEffect(() => {
     const allValues = Object.values(error).filter(val => val !== '')
     // const allTouched = Object.keys(formData).length ===  Object.values(error).length
 
@@ -62,6 +68,7 @@ const EditProduct = () => {
 
 const onSubmit = async (event) => {
   event.preventDefault()
+  console.log('cdcfsdsfsafdsd', formData);
 
   for (let inputName in formData) {
     if(inputName in validationRules ) {
@@ -71,20 +78,9 @@ const onSubmit = async (event) => {
 
 
   if(submit) {
-    const options = {
-      headers: {
-          'Content-Type' : 'application/json'
-      }
-    }
 
     const body = JSON.stringify(formData);
-
-    try {
-        const res = await axios.post('http://localhost:8000/api/v1/products/save', body, options)
-    } catch (error) {
-        console.log(error)
-    }
-     
+    dispatch(saveProduct(id, body)  )
   }
 }
 
@@ -106,7 +102,7 @@ const handleValidation = (inputName, value, validationRules) => {
 
 return (
     <>
-    { data !== null &&
+    { product !== null ?
     (   
     <>
       <Form onSubmit={onSubmit} noValidate>
@@ -195,7 +191,10 @@ return (
             </Tab>
 
             <Tab eventKey="Images" title="Images">      
-
+              <Form.Group controlId="formFileMultiple" className="mb-3">
+                <Form.Label>Multiple files input example</Form.Label>
+                <Form.Control type="file" multiple />
+              </Form.Group>
             </Tab>
 
               
@@ -206,7 +205,8 @@ return (
         </Form>
 
     </>
-        )       
+        )
+      : <FallbackLoader animation="border" role="status"/>       
     }
     </>
   );

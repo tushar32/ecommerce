@@ -18,6 +18,17 @@ const ProductSchema =  new mongoose.Schema({
     itemcode: {
         type : String
     },
+    Images:[
+        {
+          primary_image: {
+            type: String
+          },
+          secondary_image: {
+            type: String
+          }
+        },
+
+      ],
     date: {
         type: Date,
         default: Date.now()   

@@ -2,15 +2,14 @@ import React, { useEffect } from "react"
 import ProductItem from "./ProductItem"
 import { Link } from "react-router-dom";
 import { Button, Stack, Row} from "react-bootstrap";
-import { loadProducts } from "../../store/productStore/productAction";
 import { useDispatch, useSelector } from "react-redux";
+import { loadProducts } from "./productSlice";
 
 
 const Products = () => {
     const dispatch = useDispatch();
     const { list }  = useSelector((state) => state.products);
 
-    console.log(list)
     useEffect(() => {
         dispatch(loadProducts())
       },[dispatch])
@@ -21,7 +20,7 @@ const Products = () => {
          <Stack direction="horizontal" gap={3}>
             <Button> <Link to="add">Add Product</Link></Button>
         </Stack>
-        { list.length > 0 &&
+        { list.length &&
             (
                 <Row xs={1} md={2} className="g-4">     
                     {list.map(product => {

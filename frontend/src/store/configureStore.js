@@ -1,11 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import api from "./middlewares/api";
-import rootReducer, { productImageSlice, productSlice } from "./reducers";
-import { combineReducers } from 'redux'
-
-
-
-
+import rootReducer from "./rootReducer";
 
 export default function store() {
     return configureStore({

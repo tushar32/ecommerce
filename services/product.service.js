@@ -40,8 +40,9 @@ const saveProduct = async (formData) => {
 const editProduct = async (id, formData) => {
     try {
         console.log('formData', formData)
+        console.log('id', id)
 
-        const product = await Product.findByIdAndUpdate(id, body, { new: true }).exec()
+        const product = await Product.findByIdAndUpdate(id, formDat)
 
         return product
     } catch(error) {

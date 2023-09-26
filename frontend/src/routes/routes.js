@@ -3,8 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import AddProduct from "../pages/AddProduct";
 import Layout from "../components/Layout/Layout";
 import Home from "../pages/Home";
-import { Suspense, lazy } from 'react';
-import Loader from "../pages/products/Loader";
+import { lazy } from 'react';
 
 const Products = lazy(() => import ("../pages/products/Products"));
 const EditProduct = lazy(() => import ("../pages/products/EditProduct"));
@@ -22,12 +21,13 @@ const routes= createBrowserRouter([
         {
           path: "products",
           element:  <Products/>,
+
         },{
           path: "products/add",
           element:  <AddProduct/>,
         },{
           path: "products/edit/:id",
-          element:  <EditProduct/>,
+          element:  <EditProduct/>
         }
       ]
     },

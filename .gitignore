@@ -30,3 +30,6 @@ build
 .history
 
 #*.css
+
+info.log
+package-lock.json
