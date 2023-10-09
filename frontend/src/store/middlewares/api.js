@@ -7,10 +7,10 @@ const api =
     async (action) => {
         if (action.type !== actions.apiCallBegin.type) return next(action);
 
-        const { url, method, data, onStart, onSuccess, onError } =
+        const { url, method, data, params, onStart, onSuccess, onError } =
             action.payload;
 
-            console.log(action)
+            console.log(params)
         if (onStart) dispatch({ type: onStart });
 
         next(action);
@@ -19,7 +19,8 @@ const api =
             const response = await axios.request({
                 url,
                 method,
-                data,
+                params,
+                data
             });
             if(response.status === 200) {
                 const { result, error, success } = response.data

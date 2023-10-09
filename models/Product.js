@@ -18,7 +18,7 @@ const ProductSchema =  new mongoose.Schema({
     itemcode: {
         type : String
     },
-    Images:[
+    images:[
         {
           primary_image: {
             type: String

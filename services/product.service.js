@@ -2,10 +2,16 @@ const Product = require("../models/Product");
 const { TE } = require("./util.service");
 
 
-const getProducts = async () => {
+const getProducts = async (query) => {
 
     try {
-        const products = await Product.find({})
+        let searchParams = {}
+        if(query.q) {
+            searchParams = {
+                title: new RegExp(query.q, 'i')
+            }
+        }
+        const products = await Product.find(searchParams).exec()
 
         return products
     } catch(error) {
@@ -42,7 +48,7 @@ const editProduct = async (id, formData) => {
         console.log('formData', formData)
         console.log('id', id)
 
-        const product = await Product.findByIdAndUpdate(id, formDat)
+        const product = await Product.findByIdAndUpdate({_id: id}, formData)
 
         return product
     } catch(error) {

@@ -4,21 +4,21 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import { checkValidation } from '../../utils/checkValidation';
-import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { Spinner, Tab, Tabs } from 'react-bootstrap';
 import { useDispatch, useSelector } from "react-redux";
-import { loadProduct, saveProduct } from './productSlice';
+import { getProductById, saveProduct } from './productSlice';
+import FallbackLoader from '../../components/fallBackLoader';
 
 const EditProduct = () => {
     let { id } = useParams();
-
+   
     const dispatch = useDispatch();
     const { product }  = useSelector((state) => state.products);
 
     console.log('product', product)
     useEffect(() => {
-       dispatch(loadProduct(id))
+       dispatch(getProductById(id))
         
     },[dispatch])
 
@@ -78,7 +78,7 @@ const onSubmit = async (event) => {
 
 
   if(submit) {
-
+  console.log('formData', formData)
     const body = JSON.stringify(formData);
     dispatch(saveProduct(id, body)  )
   }

@@ -48,11 +48,17 @@ const productSlice = createSlice({
 
 const { productsRequested, productsReceived, productReceived, productsRequestFailed } = productSlice.actions
 
-export const loadProducts = () => (dispatch) => {
+export const loadProducts = (searchData) => (dispatch) => {
+    const params = {
+        q: searchData,
+      };
+
+      console.log('searchData', searchData)
     return dispatch(
         apiCallBegin({
-            url: PRODUCT_URL+"/",
+            url: PRODUCT_URL,
             method: 'GET',
+            params,
             onStart: productsRequested.type,
             onSuccess: productsReceived.type,
             onError: productsRequestFailed.type,
@@ -60,7 +66,7 @@ export const loadProducts = () => (dispatch) => {
     );
 };
 
-export const loadProduct = (id) => (dispatch) => {
+export const getProductById = (id) => (dispatch) => {
     
     const url = `${PRODUCT_URL}/${id}`
     return dispatch(

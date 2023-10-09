@@ -1,13 +1,18 @@
+const { ErrorHandler } = require("../services/error.service");
 const productService = require("../services/product.service");
 const { to, ReE, ReS } = require("../services/util.service");
 
 
-const getProducts = async (req,res) => {
+const getProducts = async (req,res, next) => {
     let err, products;
     let start = new Date();
     
-    [err, products] = await to(productService.getProducts());
+    //console.log(req.query)
+    [err, products] = await to(productService.getProducts(req.query));
     if (err) return ReE(res, err, 200);
+    // if (err) {
+    //     return  next(err);
+    // }
     return ReS(res,{
         message: "Successful",
         response: products,
@@ -35,16 +40,17 @@ const saveProduct = async (req,res) => {
         params: { productId }
       } = req
    
-      console.log('id', req)
+      console.log('productId', productId)
     if(productId)
-        [err, product] = await to(productService.saveProduct(formData));
-    else
         [err, product] = await to(productService.editProduct(productId, formData));
+    else
+        [err, product] = await to(productService.saveProduct(formData));
 
-        
-
+    
     console.log(product)
-    if (err) return ReE(res, err, 200);
+    if (err) {
+        throw new ErrorHandler(200, err)
+    }
     return ReS(res,{
         message: "Successful",
         response: product,

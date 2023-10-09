@@ -1,10 +1,12 @@
 import React from "react";
 import { Spinner } from 'react-bootstrap';
 
-export function FallbackLoader() {
+const FallbackLoader = () => {
 
   return (
     <Spinner animation="border" role="status"></Spinner>  
   )
 }
+
+export default FallbackLoader
 
