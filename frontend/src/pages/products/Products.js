@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { Suspense, useState } from "react"
 import ProductItem from "./ProductItem"
 import { Link } from "react-router-dom";
 import { Button, Stack, Row} from "react-bootstrap";
@@ -9,7 +9,7 @@ import SearchProducts from "./SearchProducts";
 
 const Products = () => {
     const [searchData, setSearchData] = useState({q:''})
-    const { list }  = UseProducts({searchData: searchData.q})
+    const { list, numbers }  = UseProducts({searchData: searchData.q})
 
     
     const onInputChange = (e) => {
@@ -29,7 +29,6 @@ const Products = () => {
             }
         </Row>
     )
-
         
     return (
     <>
@@ -37,8 +36,8 @@ const Products = () => {
             <Button> <Link to="add">Add Product</Link></Button>
              <SearchProducts onInputChange={onInputChange}/>
         </Stack>
-        { list.length > 0 ?
-            renderProducts() : <FallbackLoader animation="border" role="status"/>       
+        { list.length > 0 &&
+            <Suspense fallback={<FallbackLoader animation="border" role="status"/>}> { renderProducts()}  </Suspense>
         }
     </>
     )

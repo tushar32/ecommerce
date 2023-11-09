@@ -1,5 +1,6 @@
 import React   from 'react'
 import { Avatar, IconBadge, IconContainer, Logo, NavRight, NavbarContainer, NavigationWrapper } from '../../assets/styles/Navigation.style'
+import { Badge, Dropdown } from 'react-bootstrap'
 
 
     
@@ -11,9 +12,9 @@ const NavBar = () => {
                     <Logo> Admin </Logo>
                 </div>
                 <NavRight>
-                    <IconContainer>
-                        <IconBadge>5</IconBadge>
-                    </IconContainer>
+                    <Dropdown.Toggle variant="success" id="dropdown-basic">
+                            Cart Button
+                    </Dropdown.Toggle>
 
                     <IconContainer>
                         <IconBadge>3</IconBadge>

@@ -25,6 +25,7 @@ export const Logo = styled.span`
 export const NavRight = styled.span`
     display: flex;
     align-items: center;
+    justify-content: space-between;
 `
 export const IconContainer = styled.div`
     position: relative;

@@ -47,7 +47,6 @@ const saveProduct = async (req,res) => {
         [err, product] = await to(productService.saveProduct(formData));
 
     
-    console.log(product)
     if (err) {
         throw new ErrorHandler(200, err)
     }
